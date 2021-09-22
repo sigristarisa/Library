@@ -12,15 +12,20 @@
       <h1>Library</h1>
     </header>
     <main>
-      <button id="newBookButton" onclick="openBookForm()">Add Book</button>
+      <button id="addBookButton" onclick="showBookForm()">Add Book</button>
       <form id="bookForm">
         <label>Title:</label>
-        <input type="text" placeholder="title" />
+        <input type="text" id="title" placeholder="title" />
         <label>Author:</label>
-        <input type="text" placeholder="author" />
+        <input type="text" id="author" placeholder="author" />
         <label>Pages:</label>
-        <input type="text" placeholder="pages" />
-        <input id="bookSubmitButton" type="submit" />
+        <input type="text" id="pages" placeholder="pages" />
+        <input
+          type="button"
+          id="submitBookButton"
+          value="Submit"
+          onclick="library.createBook()"
+        />
       </form>
 
       <div id="booklist"></div>
