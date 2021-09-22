@@ -68,6 +68,7 @@ class Library {
     } else {
       alert("Fill in all the required information");
     }
+    bookForm.style.display = "none";
     return bookForm.reset();
   };
 }
