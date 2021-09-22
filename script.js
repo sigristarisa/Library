@@ -1,3 +1,8 @@
+// get elements from HTML file //
+const booklist = document.getElementById("booklist");
+const bookForm = document.getElementById("bookForm");
+
+// Define the book details //
 class Book {
   constructor(title, author, pages) {
     this.title = title;
@@ -6,23 +11,26 @@ class Book {
   }
 }
 
+// Create a library //
 class Library {
   constructor() {
     this.library = [];
   }
 
-  // Create a book card
+  // Create a book card //
   bookCard = () => {
-    this.library.forEach((book) => {
+    while (booklist.firstChild) {
+      booklist.removeChild(booklist.lastChild);
+    }
+    this.library.forEach((book, index) => {
       // create an container for the book card //
-      const booklist = document.getElementById("booklist");
       const bookContainer = document.createElement("div");
       bookContainer.setAttribute("id", index);
 
       // add the "remove" button //
-      // const removeButton = document.createElement("button");
-      // removeButton.setAttribute("class", "removeButton");
-      // removeButton.textContent = "Remove";
+      const removeButton = document.createElement("button");
+      removeButton.setAttribute("class", "removeButton");
+      removeButton.textContent = "Remove";
 
       // add the details of the book //
       const bookTitle = document.createElement("h3");
@@ -38,25 +46,34 @@ class Library {
       bookTitle.innerText = book.title;
       bookAuthor.innerText = "author: " + book.author;
       bookPages.innerText = "pages: " + book.pages + " pages";
+
+      // Remove a book from the library //
+      removeButton.addEventListener("click", () => {
+        booklist.removeChild(bookContainer);
+        this.library.splice(bookContainer, 1);
+      });
     });
   };
 
-  // Add the book from the form into the library //
-  createBook = () => {
-    const bookForm = document.getElementById("bookForm");
+  // Add a book from the form into the library //
+  addToLibrary = () => {
+    // Get the input //
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
 
-    this.library.push(new Book(title, author, pages));
-    console.log(this.library);
+    if (title && author && pages) {
+      this.library.push(new Book(title, author, pages));
+      this.bookCard();
+    } else {
+      alert("Fill in all the required information");
+    }
     return bookForm.reset();
   };
 }
 
 // Display the new book form once the button is clicked //
 showBookForm = () => {
-  const bookForm = document.getElementById("bookForm");
   if (bookForm.style.display === "none") {
     bookForm.style.display = "block";
   } else {
