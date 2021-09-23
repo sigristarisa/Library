@@ -20,8 +20,8 @@ body {
 
   header {
     width: 90%;
+    margin-top: 30px;
     text-align: center;
-    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,6 +29,23 @@ body {
     color: $navy;
     font-family: "Righteous", cursive;
     font-size: 25px;
+
+    h1 {
+      margin: 0;
+    }
+
+    #addBookButton {
+      width: 50px;
+      height: 50px;
+      margin-right: 1px;
+      margin-bottom: 10px;
+      color: $baby-pink;
+      font-size: 20px;
+      border: none;
+      border-radius: 50px;
+      background-color: $salmon-pink;
+      align-self: flex-end;
+    }
   }
 
   main {
@@ -41,19 +58,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    #addBookButton {
-      width: 50px;
-      height: 50px;
-      margin-right: 30px;
-      margin-bottom: 10px;
-      color: $baby-pink;
-      font-size: 20px;
-      border: none;
-      border-radius: 50px;
-      background-color: $salmon-pink;
-      align-self: flex-end;
-    }
 
     #inputContainer {
       width: 300px;
@@ -84,45 +88,44 @@ body {
         background-color: $baby-pink;
       }
     }
-  }
 
-  #booklist {
-    width: 90%;
-    height: 70%;
-    padding: 20px;
-    gap: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    div {
-      width: 250px;
-      height: 150px;
+    #booklist {
+      width: 90%;
+      height: auto;
       padding: 20px;
-      color: $navy;
-      background-color: $baby-pink;
+      gap: 10px;
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
 
-      p {
-        margin: 5px 0 5px 0;
-      }
-
-      .removeButton {
-        width: 80px;
-        height: 25px;
-        font-family: "Montserrat", sans-serif;
-        padding: 5px;
-
-        margin-top: 10px;
+      div {
+        width: 250px;
+        height: 150px;
+        padding: 20px;
         color: $navy;
-        background-color: $salmon-pink;
-        border: none;
-        border-radius: 5px;
-        align-self: flex-end;
+        background-color: $baby-pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        p {
+          margin: 5px 0 5px 0;
+        }
+
+        .removeButton {
+          width: 80px;
+          height: 25px;
+          font-family: "Montserrat", sans-serif;
+          padding: 5px;
+          margin-top: 10px;
+          color: $navy;
+          background-color: $salmon-pink;
+          border: none;
+          border-radius: 5px;
+          align-self: flex-end;
+        }
       }
     }
   }
