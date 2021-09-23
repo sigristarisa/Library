@@ -1,6 +1,11 @@
-* {
-  font-family: sans-serif;
-}
+// Colors //
+$baby-pink: rgb(240, 198, 205);
+$salmon-pink: rgb(235, 60, 54);
+$navy: rgb(1, 1, 99);
+
+// Fonts //
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 body {
   width: 100vw;
@@ -8,65 +13,116 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
+  background-color: $baby-pink;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   header {
-    width: 100%;
+    width: 90%;
     text-align: center;
     margin: 20px;
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $navy;
+    font-family: "Righteous", cursive;
+    font-size: 25px;
   }
 
   main {
     width: 90%;
     height: 80%;
-    padding: 30px;
+    margin-bottom: 30px;
+    background-color: $navy;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
 
     #addBookButton {
       width: 50px;
       height: 50px;
-      margin: 30px;
+      margin-right: 30px;
+      margin-bottom: 10px;
+      color: $baby-pink;
       font-size: 20px;
+      border: none;
       border-radius: 50px;
+      background-color: $salmon-pink;
       align-self: flex-end;
     }
 
-    #bookForm {
-      width: 250px;
-      height: 400px;
+    #inputContainer {
+      width: 300px;
+      height: 300px;
+      padding: 10px;
+      color: $navy;
+      background-color: $salmon-pink;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      z-index: 1;
       position: absolute;
-      z-index: 9;
-      border: 2px solid black;
+      top: 36%;
+      left: 37%;
 
       input {
         margin: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      #submitBookButton {
+        width: 100px;
+        height: 40px;
+        font-family: "Montserrat", sans-serif;
+        color: $navy;
+        background-color: $baby-pink;
       }
     }
-    #booklist {
-      width: 90%;
-      height: 70%;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      position: relative;
-      border: 2px solid green;
+  }
 
-      div {
-        width: 250px;
-        height: 150px;
-        padding: 10px;
-        border: 2px solid orange;
+  #booklist {
+    width: 90%;
+    height: 70%;
+    padding: 20px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    div {
+      width: 250px;
+      height: 150px;
+      padding: 20px;
+      color: $navy;
+      background-color: $baby-pink;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      p {
+        margin: 5px;
+      }
+
+      .removeButton {
+        width: 80px;
+        height: 25px;
+        font-family: "Montserrat", sans-serif;
+        padding: 5px;
+
+        margin-top: 10px;
+        color: $navy;
+        background-color: $salmon-pink;
+        border: none;
+        border-radius: 5px;
+        align-self: flex-end;
       }
     }
   }

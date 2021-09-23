@@ -45,7 +45,7 @@ class Library {
 
       bookTitle.innerText = book.title;
       bookAuthor.innerText = "author: " + book.author;
-      bookPages.innerText = "pages: " + book.pages + " pages";
+      bookPages.innerText = "pages: " + book.pages;
 
       // Remove a book from the library //
       removeButton.addEventListener("click", () => {
@@ -69,7 +69,7 @@ class Library {
       alert("Fill in all the required information");
     }
     bookForm.style.display = "none";
-    return bookForm.reset();
+    bookForm.reset();
   };
 }
 

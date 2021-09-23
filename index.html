@@ -14,18 +14,20 @@
     <main>
       <button id="addBookButton" onclick="showBookForm()">+</button>
       <form id="bookForm" style="display: none">
-        <label>Title:</label>
-        <input type="text" id="title" placeholder="title" />
-        <label>Author:</label>
-        <input type="text" id="author" placeholder="author" />
-        <label>Pages:</label>
-        <input type="text" id="pages" placeholder="pages" />
-        <input
-          type="button"
-          id="submitBookButton"
-          value="Submit"
-          onclick="library.addToLibrary()"
-        />
+        <div id="inputContainer">
+          <label>Title:</label>
+          <input type="text" id="title" />
+          <label>Author:</label>
+          <input type="text" id="author" />
+          <label>Pages:</label>
+          <input type="number" id="pages" />
+          <input
+            type="button"
+            id="submitBookButton"
+            value="Submit"
+            onclick="library.addToLibrary()"
+          />
+        </div>
       </form>
 
       <div id="booklist"></div>

@@ -1,69 +1,114 @@
-* {
-  font-family: sans-serif;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 body {
   width: 100vw;
   height: 100vh;
   display: flex;
   padding: 0;
   margin: 0;
+  background-color: #f0c6cd;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 body header {
-  width: 100%;
+  width: 90%;
   text-align: center;
   margin: 20px;
-  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #010163;
+  font-family: "Righteous", cursive;
+  font-size: 25px;
 }
 body main {
   width: 90%;
   height: 80%;
-  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #010163;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid blue;
 }
 body main #addBookButton {
   width: 50px;
   height: 50px;
-  margin: 30px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  color: #f0c6cd;
   font-size: 20px;
+  border: none;
   border-radius: 50px;
+  background-color: #eb3c36;
   align-self: flex-end;
 }
-body main #bookForm {
-  width: 250px;
-  height: 400px;
+body main #inputContainer {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  color: #010163;
+  background-color: #eb3c36;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
   position: absolute;
-  z-index: 9;
+  top: 36%;
+  left: 37%;
   border: 2px solid black;
 }
-body main #bookForm input {
+body main #inputContainer input {
   margin: 10px;
+  border: none;
+  border-radius: 5px;
+}
+body main #inputContainer #submitBookButton {
+  width: 100px;
+  height: 40px;
+  font-family: "Montserrat", sans-serif;
+  color: #010163;
+  background-color: #f0c6cd;
 }
 body main #booklist {
   width: 90%;
   height: 70%;
   padding: 20px;
+  gap: 10px;
   display: flex;
-  justify-content: space-between;
-  position: relative;
-  border: 2px solid green;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 body main #booklist div {
   width: 250px;
   height: 150px;
-  padding: 10px;
-  border: 2px solid orange;
+  padding: 20px;
+  color: #010163;
+  background-color: #f0c6cd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+body main #booklist div p {
+  margin: 5px;
+}
+body main #booklist div .removeButton {
+  width: 80px;
+  height: 25px;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
+  margin-top: 10px;
+  color: #010163;
+  background-color: #eb3c36;
+  border: none;
+  border-radius: 5px;
+  align-self: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */
