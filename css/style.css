@@ -60,7 +60,6 @@ body main #inputContainer {
   position: absolute;
   top: 36%;
   left: 37%;
-  border: 2px solid black;
 }
 body main #inputContainer input {
   margin: 10px;
@@ -74,7 +73,7 @@ body main #inputContainer #submitBookButton {
   color: #010163;
   background-color: #f0c6cd;
 }
-body main #booklist {
+body #booklist {
   width: 90%;
   height: 70%;
   padding: 20px;
@@ -84,7 +83,7 @@ body main #booklist {
   align-items: center;
   flex-wrap: wrap;
 }
-body main #booklist div {
+body #booklist div {
   width: 250px;
   height: 150px;
   padding: 20px;
@@ -95,10 +94,10 @@ body main #booklist div {
   justify-content: center;
   align-items: flex-start;
 }
-body main #booklist div p {
-  margin: 5px;
+body #booklist div p {
+  margin: 5px 0 5px 0;
 }
-body main #booklist div .removeButton {
+body #booklist div .removeButton {
   width: 80px;
   height: 25px;
   font-family: "Montserrat", sans-serif;
