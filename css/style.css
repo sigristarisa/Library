@@ -29,7 +29,7 @@ body header h1 {
 body header #addBookButton {
   width: 50px;
   height: 50px;
-  margin-right: 1px;
+  margin-right: 35px;
   margin-bottom: 10px;
   color: #f0c6cd;
   font-size: 20px;
@@ -38,12 +38,13 @@ body header #addBookButton {
   background-color: #eb3c36;
   align-self: flex-end;
 }
+body header #addBookButton:active {
+  background-color: #010163;
+}
 body main {
   width: 90%;
   height: 80%;
   margin-bottom: 30px;
-  background-color: #010163;
-  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -78,15 +79,22 @@ body main #inputContainer #submitBookButton {
   color: #010163;
   background-color: #f0c6cd;
 }
+body main #inputContainer #submitBookButton:active {
+  color: #f0c6cd;
+  background-color: #010163;
+}
 body main #booklist {
   width: 90%;
-  height: auto;
+  min-height: 80%;
   padding: 20px;
-  gap: 10px;
+  background-color: #010163;
+  font-family: "Montserrat", sans-serif;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 body main #booklist div {
   width: 250px;
@@ -113,6 +121,10 @@ body main #booklist div .removeButton {
   border: none;
   border-radius: 5px;
   align-self: flex-end;
+}
+body main #booklist div .removeButton:active {
+  color: #f0c6cd;
+  background-color: #010163;
 }
 
 /*# sourceMappingURL=style.css.map */
