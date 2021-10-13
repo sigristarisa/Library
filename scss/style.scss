@@ -46,7 +46,7 @@ body {
       background-color: $salmon-pink;
       align-self: flex-end;
     }
-    #addBookButton:active {
+    #addBookButton:hover {
       background-color: $navy;
     }
   }
@@ -66,6 +66,7 @@ body {
       padding: 10px;
       color: $navy;
       background-color: $salmon-pink;
+      font-family: "Montserrat", sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -90,7 +91,7 @@ body {
         color: $navy;
         background-color: $baby-pink;
       }
-      #submitBookButton:active {
+      #submitBookButton:hover {
         color: $baby-pink;
         background-color: $navy;
       }
@@ -136,7 +137,7 @@ body {
           border-radius: 5px;
           align-self: flex-end;
         }
-        .removeButton:active {
+        .removeButton:hover {
           color: $baby-pink;
           background-color: rgb(1, 1, 99);
         }
